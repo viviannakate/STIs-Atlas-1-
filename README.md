@@ -6,7 +6,7 @@ District of Columbia, 2013–2023, using **real CDC NCHHSTP AtlasPlus** state-le
 
 Dashboard: https://viviannakate.github.io/STIs-Atlas-1-/
 
-[![Deploy dashboard to GitHub Pages](https://github.com/viviannakate/STIs-Atlas/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/viviannakate/STIs-Atlas/actions/workflows/deploy-pages.yml)
+
 ![License: MIT](https://img.shields.io/badge/license-MIT-black)
 
 > **Data.** Source: CDC NCHHSTP AtlasPlus, state-level surveillance, ages 15–19/20–24/25–29
