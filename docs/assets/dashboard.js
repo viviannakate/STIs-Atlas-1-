@@ -74,11 +74,11 @@ function draw(){if(!ready)return;const t=RATES[mDis][String(mYear)]||{};
   colorscale:RAMP,zmin:0,zmax:s[Math.floor(s.length*.95)]||1,
   marker:{line:{width:.4,color:"rgba(255,255,255,.3)"}},
   colorbar:{title:{text:"rate/100k",font:{family:"IBM Plex Mono",size:10,color:"#8fa1bd"}},
-   tickfont:{family:"IBM Plex Mono",size:9,color:"#8fa1bd"},thickness:10,len:.7,outlinewidth:0,bgcolor:"rgba(0,0,0,0)"},
+   tickfont:{family:"IBM Plex Mono",size:9,color:"#8fa1bd"},thickness:9,len:.85,x:0.98,outlinewidth:0,bgcolor:"rgba(0,0,0,0)"},
   hovertemplate:"<b>%{location}</b><br>%{z:.0f} per 100k<extra></extra>"}],
-  {geo:{projection:{type:"albers"},visible:false,fitbounds:"locations",bgcolor:"rgba(0,0,0,0)",
-   showland:false,showlakes:false,showcountries:false,showsubunits:false,showframe:false,showcoastlines:false},
-   paper_bgcolor:"rgba(0,0,0,0)",margin:{t:6,b:6,l:6,r:6},dragmode:false},
+  {geo:{projection:{type:"albers"},visible:false,lonaxis:{range:[-125,-66]},lataxis:{range:[24,50]},bgcolor:"rgba(0,0,0,0)",
+   showland:false,showlakes:false,showcountries:false,showsubunits:false,showframe:false,showcoastlines:false,domain:{x:[0,1],y:[0,1]}},
+   paper_bgcolor:"rgba(0,0,0,0)",margin:{t:0,b:0,l:0,r:0},dragmode:false},
   {displayModeBar:false,responsive:true});}
 function init(){Promise.all([
   fetch("assets/states.geojson").then(r=>{if(!r.ok)throw 0;return r.json();}),

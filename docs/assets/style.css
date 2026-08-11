@@ -92,7 +92,7 @@ h1,h2,h3{font-family:var(--disp); font-weight:600; letter-spacing:-.01em; margin
 .yearctl{display:flex; align-items:center; gap:10px; color:var(--muted); font-family:var(--mono); font-size:12px}
 .yearctl input[type=range]{accent-color:var(--r4); width:220px}
 .yearctl .yv{color:var(--text); min-width:3.4ch; text-align:right}
-#map{width:100%; height:520px}
+#map{width:100%; height:660px}
 .maphint{padding:10px 16px; color:var(--faint2); font-family:var(--mono); font-size:11px; border-top:1px solid var(--line)}
 .mapfail{padding:26px 16px; color:var(--muted); text-align:center}
 
@@ -159,6 +159,6 @@ tbody tr:hover{background:var(--panel-2)}
 @media (max-width:860px){
   .kpis{grid-template-columns:1fr} .summ{grid-column:span 1; grid-template-columns:1fr}
   .tables{grid-template-columns:1fr} .foot .wrap{grid-template-columns:1fr}
-  .hero h1{font-size:27px} #map{height:400px}
+  .hero h1{font-size:27px} #map{height:430px}
 }
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
