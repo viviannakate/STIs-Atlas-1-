@@ -1,0 +1,402 @@
+{
+  "national": [
+    {
+      "disease": "Chlamydia",
+      "rate_2013": 1804.0,
+      "rate_2023": 1843.2,
+      "peak_year": 2019,
+      "peak_rate": 2181.3,
+      "pct_change": 2.2,
+      "apc": 0.3,
+      "cases_2023": 1214771
+    },
+    {
+      "disease": "Gonorrhea",
+      "rate_2013": 377.1,
+      "rate_2023": 524.9,
+      "peak_year": 2021,
+      "peak_rate": 667.0,
+      "pct_change": 39.2,
+      "apc": 5.0,
+      "cases_2023": 345966
+    },
+    {
+      "disease": "P&S Syphilis",
+      "rate_2013": 12.0,
+      "rate_2023": 27.7,
+      "peak_year": 2022,
+      "peak_rate": 31.3,
+      "pct_change": 130.8,
+      "apc": 9.5,
+      "cases_2023": 18260
+    }
+  ],
+  "by_age": [
+    {
+      "disease": "Chlamydia",
+      "age_group": "15-19",
+      "rate_2013": 1868.1,
+      "rate_2023": 1711.6,
+      "apc": -0.8
+    },
+    {
+      "disease": "Chlamydia",
+      "age_group": "20-24",
+      "rate_2013": 2427.0,
+      "rate_2023": 2485.1,
+      "apc": 0.4
+    },
+    {
+      "disease": "Chlamydia",
+      "age_group": "25-29",
+      "rate_2013": 1082.2,
+      "rate_2023": 1339.2,
+      "apc": 1.9
+    },
+    {
+      "disease": "Gonorrhea",
+      "age_group": "15-19",
+      "rate_2013": 340.4,
+      "rate_2023": 406.2,
+      "apc": 3.3
+    },
+    {
+      "disease": "Gonorrhea",
+      "age_group": "20-24",
+      "rate_2013": 495.5,
+      "rate_2023": 653.5,
+      "apc": 4.5
+    },
+    {
+      "disease": "Gonorrhea",
+      "age_group": "25-29",
+      "rate_2013": 287.9,
+      "rate_2023": 516.7,
+      "apc": 7.5
+    },
+    {
+      "disease": "P&S Syphilis",
+      "age_group": "15-19",
+      "rate_2013": 4.2,
+      "rate_2023": 9.6,
+      "apc": 9.3
+    },
+    {
+      "disease": "P&S Syphilis",
+      "age_group": "20-24",
+      "rate_2013": 16.0,
+      "rate_2023": 32.6,
+      "apc": 8.1
+    },
+    {
+      "disease": "P&S Syphilis",
+      "age_group": "25-29",
+      "rate_2013": 15.4,
+      "rate_2023": 41.0,
+      "apc": 11.0
+    }
+  ],
+  "spatial": [
+    {
+      "disease": "Chlamydia",
+      "morans_I": 0.304,
+      "p": 0.002,
+      "hot": 7,
+      "cold": 6
+    },
+    {
+      "disease": "Gonorrhea",
+      "morans_I": 0.256,
+      "p": 0.002,
+      "hot": 9,
+      "cold": 8
+    },
+    {
+      "disease": "P&S Syphilis",
+      "morans_I": 0.131,
+      "p": 0.033,
+      "hot": 1,
+      "cold": 7
+    }
+  ],
+  "top_states": {
+    "Chlamydia": [
+      {
+        "state": "District of Columbia",
+        "state_abbr": "DC",
+        "region": "South",
+        "rate": 3411.2,
+        "apc": 1.3
+      },
+      {
+        "state": "Louisiana",
+        "state_abbr": "LA",
+        "region": "South",
+        "rate": 3316.0,
+        "apc": 2.7
+      },
+      {
+        "state": "Mississippi",
+        "state_abbr": "MS",
+        "region": "South",
+        "rate": 2892.7,
+        "apc": 2.6
+      },
+      {
+        "state": "South Carolina",
+        "state_abbr": "SC",
+        "region": "South",
+        "rate": 2573.5,
+        "apc": 2.1
+      },
+      {
+        "state": "Delaware",
+        "state_abbr": "DE",
+        "region": "South",
+        "rate": 2488.3,
+        "apc": 0.6
+      },
+      {
+        "state": "Georgia",
+        "state_abbr": "GA",
+        "region": "South",
+        "rate": 2479.5,
+        "apc": 1.7
+      },
+      {
+        "state": "North Carolina",
+        "state_abbr": "NC",
+        "region": "South",
+        "rate": 2423.9,
+        "apc": 1.3
+      },
+      {
+        "state": "Arkansas",
+        "state_abbr": "AR",
+        "region": "South",
+        "rate": 2384.3,
+        "apc": 0.6
+      },
+      {
+        "state": "Alaska",
+        "state_abbr": "AK",
+        "region": "West",
+        "rate": 2286.5,
+        "apc": -1.4
+      },
+      {
+        "state": "Alabama",
+        "state_abbr": "AL",
+        "region": "South",
+        "rate": 2242.1,
+        "apc": -0.5
+      }
+    ],
+    "Gonorrhea": [
+      {
+        "state": "District of Columbia",
+        "state_abbr": "DC",
+        "region": "South",
+        "rate": 1861.0,
+        "apc": 7.0
+      },
+      {
+        "state": "Louisiana",
+        "state_abbr": "LA",
+        "region": "South",
+        "rate": 1050.4,
+        "apc": 5.4
+      },
+      {
+        "state": "Mississippi",
+        "state_abbr": "MS",
+        "region": "South",
+        "rate": 925.2,
+        "apc": 7.4
+      },
+      {
+        "state": "Georgia",
+        "state_abbr": "GA",
+        "region": "South",
+        "rate": 882.0,
+        "apc": 6.0
+      },
+      {
+        "state": "North Carolina",
+        "state_abbr": "NC",
+        "region": "South",
+        "rate": 795.8,
+        "apc": 4.5
+      },
+      {
+        "state": "South Carolina",
+        "state_abbr": "SC",
+        "region": "South",
+        "rate": 795.0,
+        "apc": 5.4
+      },
+      {
+        "state": "Alaska",
+        "state_abbr": "AK",
+        "region": "West",
+        "rate": 730.2,
+        "apc": 6.4
+      },
+      {
+        "state": "Alabama",
+        "state_abbr": "AL",
+        "region": "South",
+        "rate": 702.5,
+        "apc": 4.4
+      },
+      {
+        "state": "South Dakota",
+        "state_abbr": "SD",
+        "region": "Midwest",
+        "rate": 677.0,
+        "apc": 10.3
+      },
+      {
+        "state": "Florida",
+        "state_abbr": "FL",
+        "region": "South",
+        "rate": 670.4,
+        "apc": 6.7
+      }
+    ],
+    "P&S Syphilis": [
+      {
+        "state": "South Dakota",
+        "state_abbr": "SD",
+        "region": "Midwest",
+        "rate": 145.5,
+        "apc": 31.1
+      },
+      {
+        "state": "Mississippi",
+        "state_abbr": "MS",
+        "region": "South",
+        "rate": 61.4,
+        "apc": 21.5
+      },
+      {
+        "state": "Louisiana",
+        "state_abbr": "LA",
+        "region": "South",
+        "rate": 57.0,
+        "apc": 5.5
+      },
+      {
+        "state": "Alabama",
+        "state_abbr": "AL",
+        "region": "South",
+        "rate": 56.8,
+        "apc": 16.4
+      },
+      {
+        "state": "New Mexico",
+        "state_abbr": "NM",
+        "region": "West",
+        "rate": 55.7,
+        "apc": 20.2
+      },
+      {
+        "state": "Arkansas",
+        "state_abbr": "AR",
+        "region": "South",
+        "rate": 52.4,
+        "apc": 21.7
+      },
+      {
+        "state": "Montana",
+        "state_abbr": "MT",
+        "region": "West",
+        "rate": 49.6,
+        "apc": 39.1
+      },
+      {
+        "state": "District of Columbia",
+        "state_abbr": "DC",
+        "region": "South",
+        "rate": 46.5,
+        "apc": 7.6
+      },
+      {
+        "state": "Arizona",
+        "state_abbr": "AZ",
+        "region": "West",
+        "rate": 40.3,
+        "apc": 14.8
+      },
+      {
+        "state": "Oklahoma",
+        "state_abbr": "OK",
+        "region": "South",
+        "rate": 40.0,
+        "apc": 24.0
+      }
+    ]
+  },
+  "fastest_rising": [
+    {
+      "state": "Montana",
+      "state_abbr": "MT",
+      "region": "West",
+      "mean_apc": 14.8
+    },
+    {
+      "state": "South Dakota",
+      "state_abbr": "SD",
+      "region": "Midwest",
+      "mean_apc": 13.9
+    },
+    {
+      "state": "Alaska",
+      "state_abbr": "AK",
+      "region": "West",
+      "mean_apc": 12.1
+    },
+    {
+      "state": "Mississippi",
+      "state_abbr": "MS",
+      "region": "South",
+      "mean_apc": 10.5
+    },
+    {
+      "state": "Iowa",
+      "state_abbr": "IA",
+      "region": "Midwest",
+      "mean_apc": 9.1
+    },
+    {
+      "state": "Kansas",
+      "state_abbr": "KS",
+      "region": "Midwest",
+      "mean_apc": 9.0
+    },
+    {
+      "state": "Wisconsin",
+      "state_abbr": "WI",
+      "region": "Midwest",
+      "mean_apc": 9.0
+    },
+    {
+      "state": "Wyoming",
+      "state_abbr": "WY",
+      "region": "West",
+      "mean_apc": 8.9
+    },
+    {
+      "state": "Arkansas",
+      "state_abbr": "AR",
+      "region": "South",
+      "mean_apc": 8.6
+    },
+    {
+      "state": "Utah",
+      "state_abbr": "UT",
+      "region": "West",
+      "mean_apc": 8.4
+    }
+  ]
+}

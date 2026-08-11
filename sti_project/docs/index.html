@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STI Atlas — state-level trends among persons aged 15–29 (US, 2013–2023)</title>
+<meta name="description" content="Interactive dashboard of chlamydia, gonorrhea, and P&S syphilis among persons aged 15–29 in the United States, 2013–2023, from CDC AtlasPlus: state trends, choropleths, and rankings.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="mast"><div class="wrap">
+  <div class="brand"><span class="glyph">STI·ATLAS</span><b>State Surveillance</b><span>· ages 15–29</span></div>
+  <div class="spacer"></div>
+  <span class="chip mono" id="yearChip">2013–2023</span>
+  <span class="chip mono">CDC ATLASPLUS</span>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Spatial epidemiology · chlamydia · gonorrhea · syphilis</div>
+  <h1>STIs among young people, state by state.</h1>
+  <p class="lede">Reported rates of three bacterial STIs among persons aged 15–29 across all 50 states
+    and DC, 2013–2023, from CDC's NCHHSTP AtlasPlus. Pick an infection and a year to redraw the map;
+    the analysis below quantifies the decade's trends, geography, and highest-burden states.</p>
+  <div class="console">
+    <div class="bar">
+      <div class="seg" id="mapDisease" role="group" aria-label="Infection">
+        <button data-d="Chlamydia" aria-pressed="true">Chlamydia</button>
+        <button data-d="Gonorrhea" aria-pressed="false">Gonorrhea</button>
+        <button data-d="P&S Syphilis" aria-pressed="false">P&amp;S Syphilis</button>
+      </div>
+      <div class="yearctl"><label for="mapYear">YEAR</label>
+        <input type="range" id="mapYear" min="2013" max="2023" step="1" value="2023">
+        <span class="yv mono" id="mapYearVal">2023</span></div>
+    </div>
+    <div id="map"><div class="mapfail" id="mapMsg">Loading state map…</div></div>
+    <div class="maphint" id="mapHint">Rate per 100,000 · ages 15–29 · hover a state for detail</div>
+  </div>
+</div></section>
+
+<section class="section wrap" id="overview">
+  <div class="head"><span class="num">01</span><div>
+    <h2>The decade at a glance</h2>
+    <div class="sub">National change among persons aged 15–29, annual percent change (APC), 2023 case burden, and the strength of between-state clustering.</div></div></div>
+  <div class="kpis" id="kpiGrid"></div>
+</section>
+
+<section class="section wrap" id="trends">
+  <div class="head"><span class="num">02</span><div>
+    <h2>Regional trajectories</h2>
+    <div class="sub">Population-weighted rate per 100,000 by U.S. Census region. Chlamydia plateaued after a 2020 dip; gonorrhea and syphilis rose then began to turn.</div></div></div>
+  <div class="tabs" id="trendTabs" role="tablist"></div>
+  <div class="chartbox"><canvas id="trendChart" height="360"></canvas></div>
+</section>
+
+<section class="section wrap" id="maps">
+  <div class="head"><span class="num">03</span><div>
+    <h2>Geography &amp; change</h2>
+    <div class="sub">State rates in 2013 vs 2023 for the selected infection, plus the decade trend (APC) and the age-group breakdown.</div></div></div>
+  <div class="tabs" id="galleryTabs" role="tablist"></div>
+  <div class="gallery">
+    <img id="choImg" alt="State choropleth 2013 vs 2023">
+    <div class="cap">State rate per 100,000, ages 15–29 — 2013 vs 2023.</div>
+    <img id="apcImg" alt="State annual percent change map" style="margin-top:16px">
+    <div class="cap">State-level annual percent change, 2013–2023. Red = increasing, blue = decreasing.</div>
+    <img id="ageImg" alt="Trends by age group" style="margin-top:16px">
+    <div class="cap">Rates by age band (15–19, 20–24, 25–29): the burden has shifted toward the 25–29 group.</div>
+  </div>
+</section>
+
+<section class="section wrap" id="rankings">
+  <div class="head"><span class="num">04</span><div>
+    <h2>Highest-burden &amp; fastest-rising states</h2>
+    <div class="sub">The ten states with the highest 2023 rate for the selected infection, and the ten rising fastest across all three (mean APC).</div></div></div>
+  <div class="tables">
+    <div class="tpanel">
+      <h3>Highest burden, 2023 <small>rate per 100,000, ages 15–29</small></h3>
+      <div class="tabs" id="burdenTabs" role="tablist" style="padding:10px 16px 0"></div>
+      <table><thead><tr><th>State</th><th>Region</th><th style="text-align:right">Rate</th><th style="text-align:right">APC %/yr</th></tr></thead>
+      <tbody id="burdenBody"></tbody></table>
+    </div>
+    <div class="tpanel">
+      <h3>Fastest rising <small>mean annual % change across all three infections</small></h3>
+      <table><thead><tr><th>State</th><th>Region</th><th style="text-align:right">Mean APC %/yr</th></tr></thead>
+      <tbody id="risingBody"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<footer class="foot"><div class="wrap">
+  <div><h4>About</h4><p>An interactive read on reported rates of chlamydia, gonorrhea, and
+    primary &amp; secondary syphilis among persons aged 15–29 in the United States, 2013–2023.
+    Trends, choropleths, decade change, and state rankings, with a reproducible analysis pipeline.</p></div>
+  <div><h4>Methods</h4><ul>
+    <li>Population-weighted state &amp; regional rates</li>
+    <li>Log-linear annual percent change (APC)</li>
+    <li>Global Moran's I (kNN, 999 perms)</li>
+    <li>Ages 15–19 + 20–24 + 25–29 combined</li></ul></div>
+  <div><h4>Sources</h4><ul>
+    <li><a href="https://www.cdc.gov/nchhstp/about/atlasplus.html">CDC NCHHSTP AtlasPlus</a></li>
+    <li><a href="https://www.cdc.gov/sti-statistics/annual/index.html">CDC STI Surveillance</a></li></ul></div>
+  <div class="prov" id="provText"></div>
+</div></footer>
+
+<script src="assets/vendor/plotly-geo.min.js" charset="utf-8"></script>
+<script src="assets/vendor/chart.umd.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/dashboard.js"></script>
+</body></html>

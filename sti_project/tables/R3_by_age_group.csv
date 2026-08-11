@@ -1,0 +1,10 @@
+disease,age_group,rate_2013,rate_2023,apc
+Chlamydia,15-19,1868.1,1711.6,-0.8
+Chlamydia,20-24,2427.0,2485.1,0.4
+Chlamydia,25-29,1082.2,1339.2,1.9
+Gonorrhea,15-19,340.4,406.2,3.3
+Gonorrhea,20-24,495.5,653.5,4.5
+Gonorrhea,25-29,287.9,516.7,7.5
+P&S Syphilis,15-19,4.2,9.6,9.3
+P&S Syphilis,20-24,16.0,32.6,8.1
+P&S Syphilis,25-29,15.4,41.0,11.0
