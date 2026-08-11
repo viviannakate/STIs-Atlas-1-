@@ -4,6 +4,8 @@ Interactive dashboard and reproducible analysis of chlamydia, gonorrhea, and pri
 secondary (P&S) syphilis among **persons aged 15–29** across all 50 U.S. states and the
 District of Columbia, 2013–2023, using **real CDC NCHHSTP AtlasPlus** state-level data.
 
+Dashboard: linkhttps://viviannakate.github.io/STIs-Atlas-1-/
+
 [![Deploy dashboard to GitHub Pages](https://github.com/viviannakate/STIs-Atlas/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/viviannakate/STIs-Atlas/actions/workflows/deploy-pages.yml)
 ![License: MIT](https://img.shields.io/badge/license-MIT-black)
 
